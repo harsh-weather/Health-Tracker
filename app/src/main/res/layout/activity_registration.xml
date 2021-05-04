@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    tools:context=".Registration">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:padding="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="224dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_label3"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/patient_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/radio_selector"
+                    android:button="@android:color/transparent"
+                    android:checked="true"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:onClick="checkButton"
+                    android:padding="8dp"
+                    android:text="Patient"
+                    android:textColor="@color/text" />
+
+                <RadioButton
+                    android:id="@+id/caretaker_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/radio_selector"
+                    android:button="@android:color/transparent"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:onClick="checkButton"
+                    android:padding="8dp"
+                    android:text="Caretaker"
+                    android:textColor="@color/text" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="TextView"
+                android:textColor="@color/text"
+                app:layout_constraintStart_toEndOf="@+id/email_label"
+                app:layout_constraintTop_toTopOf="@+id/email_label" />
+
+            <TextView
+                android:id="@+id/email_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Email"
+                android:textColor="@color/text"
+                app:layout_constraintStart_toStartOf="@+id/name_label"
+                app:layout_constraintTop_toBottomOf="@+id/name_label" />
+
+            <TextView
+                android:id="@+id/name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Name"
+                android:textColor="@color/text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name_label3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Select user type:"
+                android:textColor="@color/text"
+                app:layout_constraintStart_toStartOf="@+id/email_label"
+                app:layout_constraintTop_toBottomOf="@+id/email_label" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="TextView"
+                android:textColor="@color/text"
+                app:layout_constraintStart_toEndOf="@+id/name_label"
+                app:layout_constraintTop_toTopOf="@+id/name_label" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/register_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="58dp"
+                android:layout_marginLeft="58dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginRight="60dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:padding="16dp"
+                android:text="Register"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/toolbar_dark"
+                app:cornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="88dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="Registration"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

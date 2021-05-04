@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+
+
+        <TextView
+            android:id="@+id/oxygen_measure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:padding="8dp"
+            android:text="Entry Item"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/prussian_blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bpm_measure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_bold"
+            android:padding="8dp"
+            android:text="Entry Item"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/prussian_blue"
+            app:layout_constraintEnd_toStartOf="@+id/temp_measure"
+            app:layout_constraintStart_toEndOf="@+id/oxygen_measure"
+            app:layout_constraintTop_toTopOf="@+id/oxygen_measure" />
+
+        <TextView
+            android:id="@+id/temp_measure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:padding="8dp"
+            android:text="Entry Item"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/prussian_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bpm_measure" />
+
+        <TextView
+            android:id="@+id/datetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans"
+            android:padding="8dp"
+            android:text="DateTime"
+            android:textColor="@color/magenta"
+            app:layout_constraintStart_toStartOf="@+id/oxygen_measure"
+            app:layout_constraintTop_toBottomOf="@+id/oxygen_measure" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toBottomOf="@+id/bpm_measure"
+            app:layout_constraintEnd_toStartOf="@+id/bpm_measure"
+            app:layout_constraintStart_toEndOf="@+id/oxygen_measure"
+            app:layout_constraintTop_toTopOf="@+id/bpm_measure" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toBottomOf="@+id/bpm_measure"
+            app:layout_constraintEnd_toEndOf="@+id/bpm_measure"
+            app:layout_constraintEnd_toStartOf="@+id/temp_measure"
+            app:layout_constraintStart_toEndOf="@+id/bpm_measure"
+            app:layout_constraintTop_toTopOf="@+id/bpm_measure" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

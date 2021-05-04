@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF3E3E3E</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="magenta">#FFE00665</color>
+    <color name="blue">#FF186BDA</color>
+    <color name="violet">#FF960665</color>
+
+    <color name="prussian_blue">#FF034363</color>
+    <color name="light_blue">#FF219EBC</color>
+    <color name="lighter_blue">#FF8ECAE6</color>
+    <color name="honey_yellow">#FFFFB703</color>
+    <color name="orange">#FFFB8500</color>
+
+    <color name="card_bg">#FFFFFFFF</color>
+    <color name="card_main_text">#FF960665</color>
+    <color name="card_secondary_text">#FFE00680</color>
+    <color name="app_bg">#FBEFF8</color>
+    <color name="toolbar_color">#FF960665</color>
+    <color name="tab_highlight">#FFC73B</color>
+    <color name="input_text_unfocused">#FF3E3E3E</color>
+    <color name="toolbar_dark">#8C0532</color>
+    <color name="text">#8C0532</color>
+</resources>

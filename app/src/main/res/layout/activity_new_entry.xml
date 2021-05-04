@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="350dp"
+        android:layout_height="450dp"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/save_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Save"
+                app:backgroundTint="@color/toolbar_dark"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/ic_baseline_add_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+                app:rippleColor="@color/card_main_text" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/view_records_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/button_border"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="View Records"
+                app:backgroundTint="@color/toolbar_dark"
+                app:icon="@drawable/ic_baseline_checklist_rtl_24"
+                app:layout_constraintEnd_toEndOf="@+id/save_btn"
+                app:layout_constraintStart_toStartOf="@+id/save_btn"
+                app:layout_constraintTop_toBottomOf="@+id/save_btn"
+                app:rippleColor="@color/card_main_text" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout3"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:hint="Temperature"
+                android:theme="@style/myTextInputLabel"
+                app:boxStrokeColor="@color/card_main_text"
+                app:hintTextColor="@color/card_main_text"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+                app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+                app:startIconDrawable="@drawable/temp_selector"
+                app:startIconTint="@color/card_main_text"
+                app:suffixText="°F"
+                app:suffixTextColor="@color/card_main_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/temp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/card_main_text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:hint="Oxygen (%)"
+                android:theme="@style/myTextInputLabel"
+                app:boxStrokeColor="@color/card_main_text"
+                app:hintTextColor="@color/card_main_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:startIconDrawable="@drawable/ic_baseline_air_24"
+                app:startIconTint="@color/card_main_text"
+                app:suffixText="%"
+                app:suffixTextColor="@color/card_main_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/oxygen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/open_sans"
+                    android:inputType="number"
+                    android:textColor="@color/card_main_text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:hint="BPM"
+                android:theme="@style/myTextInputLabel"
+                app:boxStrokeColor="@color/card_main_text"
+                app:hintTextColor="@color/card_main_text"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+                app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+                app:startIconDrawable="@drawable/ic_baseline_heart_24"
+                app:startIconTint="@color/card_main_text"
+                app:suffixText="BPM"
+                app:suffixTextColor="@color/card_main_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bpm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans"
+                    android:inputType="number"
+                    android:textColor="@color/card_main_text" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="New Entry"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

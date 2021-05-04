@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="card_bg">#1F1F1F</color>
+    <color name="card_main_text">#41D885</color>
+    <color name="card_secondary_text">#FF018786</color>
+    <color name="app_bg">#FF0A0A0A</color>
+    <color name="toolbar_color">#FF01233C</color>
+    <color name="tab_highlight">#FF03DAC5</color>
+    <color name="input_text_unfocused">#FF03DAC5</color>
+    <color name="mtrl_textinput_default_box_stroke_color" tools:ignore="MissingDefaultResource">#FFFFFF</color>
+    <color name="toolbar_dark">#011421</color>
+    <color name="text">#FFFFFF</color>
+</resources>
