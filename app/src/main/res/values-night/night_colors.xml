@@ -10,4 +10,11 @@
     <color name="mtrl_textinput_default_box_stroke_color" tools:ignore="MissingDefaultResource">#FFFFFF</color>
     <color name="toolbar_dark">#011421</color>
     <color name="text">#FFFFFF</color>
+    <color name="radio_txt_unfcsd">#FF03DAC5</color>
+    <color name="radio_txt_fcsd">#FF01233C</color>
+    <color name="radio_btn">#FF03DAC5</color>
+    <color name="border">#03BADA</color>
+    <color name="border_bg">#121212</color>
+    <color name="btn_color">#013256</color>
+
 </resources>

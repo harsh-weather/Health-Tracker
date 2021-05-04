@@ -21,10 +21,16 @@
     <color name="card_bg">#FFFFFFFF</color>
     <color name="card_main_text">#FF960665</color>
     <color name="card_secondary_text">#FFE00680</color>
-    <color name="app_bg">#FBEFF8</color>
-    <color name="toolbar_color">#FF960665</color>
+    <color name="app_bg">#FAF9F0</color>
+    <color name="toolbar_color">#8C0532</color>
     <color name="tab_highlight">#FFC73B</color>
     <color name="input_text_unfocused">#FF3E3E3E</color>
-    <color name="toolbar_dark">#8C0532</color>
+    <color name="toolbar_dark">#50031D</color>
     <color name="text">#8C0532</color>
+    <color name="radio_btn">#8C0532</color>
+    <color name="radio_txt_unfcsd">#8C0532</color>
+    <color name="radio_txt_fcsd">#FFFFFF</color>
+    <color name="border">#EF5350</color>
+    <color name="border_bg">#FDF8FC</color>
+    <color name="btn_color">#8C0532</color>
 </resources>

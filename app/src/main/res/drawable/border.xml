@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
         <corners android:radius="20dp"/>
-        <stroke android:color="@color/tab_highlight" android:width="8dp"/>
-        <solid android:color="@color/app_bg"/>
+        <stroke android:color="@color/border" android:width="8dp"/>
+        <solid android:color="@color/border_bg"/>
 </shape>
