@@ -29,8 +29,10 @@ public class CardAdapterOxygen extends RecyclerView.Adapter<MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.mEntry.setText(recordList.get(position).getOxygen());
-        holder.mDateTime.setText((recordList.get(position).getDate()));
-
+        holder.mDate.setText((recordList.get(position).getDate()));
+        String[] date_time = recordList.get(position).getDate().split(" ");
+        holder.mDate.setText(date_time[0]);
+        holder.mTime.setText(date_time[1]);
     }
 
     @Override

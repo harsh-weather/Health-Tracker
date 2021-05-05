@@ -31,7 +31,9 @@ public class CardAdapterGeneral extends RecyclerView.Adapter<MyViewHolderGeneral
         holder.mEntry1.setText(recordList.get(position).getOxygen());
         holder.mEntry2.setText(recordList.get(position).getBpm());
         holder.mEntry3.setText(recordList.get(position).getTemp());
-        holder.mDateTime.setText((recordList.get(position).getDate()));
+        String[] date_time = recordList.get(position).getDate().split(" ");
+        holder.mDate.setText(date_time[0]);
+        holder.mTime.setText(date_time[1]);
     }
 
     @Override
