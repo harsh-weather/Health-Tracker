@@ -1,8 +1,5 @@
 package com.example.tabbed_test;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -28,6 +25,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginPage extends AppCompatActivity {
     private static final String TAG ="App" ;
@@ -151,6 +151,8 @@ public class LoginPage extends AppCompatActivity {
                     intent.putExtra("type", type);
                     intent.putExtra("name", user.getDisplayName());
                     intent.putExtra("email", user.getEmail());
+                    intent.putExtra("img", user.getPhotoUrl().toString());
+
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);

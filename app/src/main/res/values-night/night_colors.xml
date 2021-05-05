@@ -16,5 +16,5 @@
     <color name="border">#03BADA</color>
     <color name="border_bg">#121212</color>
     <color name="btn_color">#013256</color>
-
+    <color name="toolbar_darkest">#010D15</color>
 </resources>

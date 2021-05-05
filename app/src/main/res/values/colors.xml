@@ -26,11 +26,12 @@
     <color name="tab_highlight">#FFC73B</color>
     <color name="input_text_unfocused">#FF3E3E3E</color>
     <color name="toolbar_dark">#50031D</color>
+    <color name="toolbar_darkest">#20020C</color>
     <color name="text">#8C0532</color>
     <color name="radio_btn">#8C0532</color>
     <color name="radio_txt_unfcsd">#8C0532</color>
     <color name="radio_txt_fcsd">#FFFFFF</color>
-    <color name="border">#EF5350</color>
+    <color name="border">#EF5055</color>
     <color name="border_bg">#FDF8FC</color>
     <color name="btn_color">#8C0532</color>
 </resources>

@@ -1,18 +1,9 @@
 package com.example.tabbed_test;
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -22,7 +13,12 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -30,7 +26,6 @@ import java.util.Comparator;
  * create an instance of this fragment.
  */
 public class FirstFragment extends Fragment {
-ListView mylistview;
 ArrayList<Record> recordList;
 DatabaseReference db;
 RecyclerView recyclerView;
@@ -96,27 +91,23 @@ CardAdapterOxygen cardAdapter;
 
         db = FirebaseDatabase.getInstance().getReference().child("Table-1");
         db.addValueEventListener(new ValueEventListener() {
+
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 recordList.clear();
-                for(DataSnapshot recordDatasnap: snapshot.getChildren()){
+                for(DataSnapshot recordDatasnap: snapshot.getChildren()) {
                     Record record = recordDatasnap.getValue(Record.class);
                     recordList.add(record);
                 }
-
             Collections.reverse(recordList);
 
             cardAdapter = new CardAdapterOxygen(getActivity(), recordList);
             recyclerView.setAdapter(cardAdapter);
             }
 
-
-
     @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
-
     }
 }

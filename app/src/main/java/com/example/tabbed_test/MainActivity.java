@@ -1,9 +1,11 @@
 package com.example.tabbed_test;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -11,8 +13,10 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
+import com.squareup.picasso.Picasso;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -32,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     TextView nav_name, nav_email, nav_type;
     MenuItem newEntryMenuItem;
     String userName, userEmail, userType;
+    ImageView nav_pic;
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,14 +59,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         nav_name = headerView.findViewById(R.id.nav_name);
         nav_email = headerView.findViewById(R.id.nav_email);
         nav_type = headerView.findViewById(R.id.nav_type);
+        nav_pic = headerView.findViewById(R.id.nav_pic);
 
         Intent intent = getIntent();
         userName = intent.getStringExtra("name");
         userEmail = intent.getStringExtra("email");
         userType = intent.getStringExtra("type");
+        String photoUrl = intent.getStringExtra("img");
+
         nav_name.setText(userName);
         nav_email.setText(userEmail);
         nav_type.setText(userType);
+        nav_pic.setClipToOutline(true);
+        Picasso.with(getApplicationContext()).load(photoUrl).fit().centerInside().into(nav_pic);
 
         newEntryMenuItem = navigationView.getMenu().findItem(R.id.newEntryMenuItem);
 
