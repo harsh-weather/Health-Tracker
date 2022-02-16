@@ -6,7 +6,7 @@ This app can easily be used and recording vitals takes less than 10 seconds. All
 ![traverse](https://user-images.githubusercontent.com/64117930/154215431-7c0f7481-8dca-4182-bdd8-bbc723471135.gif)
 
 ### Login via Google
-Upon opening the app, you will be automatically signed in with the user's last entered Gmail credentials.
+Upon opening the app, users will be automatically signed in with the their last entered Gmail credentials.
 
 ![login](https://user-images.githubusercontent.com/64117930/154219425-117a6a85-154b-4685-a237-bc1a5c54555c.gif)
 
